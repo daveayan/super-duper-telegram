@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.daveayan.superdupertelegram.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/textFromNumber"
+            android:text="From Number"
+            android:singleLine="true"
+            android:selectAllOnFocus="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/textToPhoneNumber"
+            android:text="To Number"
+            android:singleLine="true"
+            android:selectAllOnFocus="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/textMessage"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            android:text="Enter Message Here" />
+
+        <Button
+            android:text="Save Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:onClick="onSaveSettings"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_weight="0.93">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llMessages"
+                android:scrollbars="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:text="Send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSend"
+            android:onClick="onSendMessageClicked"/>
+
+    </LinearLayout>
+</RelativeLayout>
